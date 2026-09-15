@@ -317,3 +317,47 @@ html {
     scroll-behavior: auto;
   }
 }
+
+/* ===== Fluidity & performance layer ===== */
+html {
+  scroll-padding-top: 6rem;
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overscroll-behavior-y: none;
+}
+
+img,
+video {
+  content-visibility: auto;
+}
+
+section {
+  contain-intrinsic-size: auto 600px;
+}
+
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.aurora-orb,
+canvas {
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
