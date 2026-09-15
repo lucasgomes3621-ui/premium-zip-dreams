@@ -76,26 +76,28 @@ export const Hero: React.FC<HeroProps> = ({ onImageClick }) => {
             />
 
             <div className="relative flex flex-col items-center">
-              <div className="relative h-24 sm:h-32 md:h-40 aspect-[16/9] flex items-center justify-center transition-all duration-700 ease-out">
-                {/* Static High-Res Logo */}
+              <div className="relative h-36 sm:h-52 md:h-64 lg:h-80 aspect-[16/9] flex items-center justify-center transition-all duration-700 ease-out [will-change:transform]">
+                {/* Static High-Res Logo (base / fallback) */}
                 <img
                   src={officialLogoPath}
                   alt="Gomes Studio"
-                  className={`h-full w-full object-contain transition-all duration-500 ease-out drop-shadow-[0_15px_35px_rgba(0,0,0,0.9)] ${
-                    logoHovered ? 'opacity-0 scale-95' : 'opacity-100 scale-100'
+                  fetchPriority="high"
+                  className={`h-full w-full object-contain transition-all duration-700 ease-out drop-shadow-[0_25px_60px_rgba(0,0,0,0.9)] ${
+                    logoHovered ? 'opacity-0 scale-[0.97]' : 'opacity-100 scale-100'
                   }`}
                 />
 
-                {/* Animated Logo Video on Hover */}
+                {/* Cinematic Animated Logo */}
                 <video
                   ref={heroVideoRef}
                   src={logoVideoPath}
                   muted
                   playsInline
                   loop
+                  autoPlay
                   preload="auto"
-                  className={`absolute inset-0 h-full w-full object-contain mix-blend-screen transition-all duration-500 ease-out pointer-events-none drop-shadow-[0_20px_50px_rgba(56,189,248,0.6)] ${
-                    logoHovered ? 'opacity-100 scale-105' : 'opacity-0 scale-95'
+                  className={`absolute inset-0 h-full w-full object-contain mix-blend-screen transition-all duration-700 ease-out pointer-events-none drop-shadow-[0_30px_80px_rgba(56,189,248,0.55)] [will-change:transform,opacity] ${
+                    logoHovered ? 'opacity-100 scale-[1.06]' : 'opacity-95 scale-100'
                   }`}
                 />
 

@@ -170,8 +170,8 @@ export const ABOUT_DATA = {
 
 export const FOUNDER_DATA = {
   sectionNumber: '05 // FUNDADOR',
-  titlePrefix: 'Por trás da ',
-  titleBrand: 'GOMES STUDIO',
+  titlePrefix: 'Quem é a mente por trás da ',
+  titleBrand: 'GOMES STUDIO?',
   nameGreeting: 'Eu sou Lucas Gomes, fundador e desenvolvedor da GOMES STUDIO.',
   role: 'Fundador & Lead Developer / Designer',
   location: 'Nanuque - MG',
