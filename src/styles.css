@@ -142,3 +142,178 @@
     color: var(--color-foreground);
   }
 }
+
+/* ============================================================
+   GOMES STUDIO — camada premium (tipografia, grid e aurora)
+   ============================================================ */
+
+body {
+  font-family: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background-color: #05070a;
+  color: #e2e8f0;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #05070a;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e222d;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #0066ff;
+}
+
+.site-nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+}
+
+@media (max-width: 768px) {
+  .mobile-menu-drawer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.5rem;
+    background-color: rgba(18, 21, 28, 0.96);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    transition:
+      max-height 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+      opacity 0.25s ease-in-out;
+  }
+
+  .mobile-menu-drawer a {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    border-radius: 0.375rem;
+    transition:
+      background-color 0.2s ease,
+      color 0.2s ease;
+  }
+
+  .mobile-menu-drawer a:hover,
+  .mobile-menu-drawer a:active {
+    background-color: rgba(0, 102, 255, 0.12);
+    color: #38bdf8;
+  }
+}
+
+.bg-blueprint-grid {
+  background-size: 40px 40px;
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+
+.glow-blue {
+  box-shadow: 0 0 35px -5px rgba(0, 102, 255, 0.45);
+}
+
+.glow-cyan {
+  box-shadow: 0 0 30px -5px rgba(56, 189, 248, 0.35);
+}
+
+.bg-vignette {
+  background: radial-gradient(ellipse at 50% 40%, transparent 35%, rgba(3, 5, 8, 0.85) 100%);
+}
+
+.bg-noise-overlay {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='0.6'/%3E%3C/svg%3E");
+}
+
+.aurora-orb {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(90px);
+  opacity: 0.4;
+  will-change: transform;
+}
+
+.aurora-orb-a {
+  width: 46vw;
+  height: 46vw;
+  top: -12vw;
+  left: -10vw;
+  background: radial-gradient(circle, rgba(0, 102, 255, 0.55), transparent 65%);
+  animation: aurora-drift-a 26s ease-in-out infinite;
+}
+
+.aurora-orb-b {
+  width: 38vw;
+  height: 38vw;
+  bottom: -14vw;
+  right: -8vw;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.45), transparent 65%);
+  animation: aurora-drift-b 32s ease-in-out infinite;
+}
+
+.aurora-orb-c {
+  width: 30vw;
+  height: 30vw;
+  top: 38%;
+  left: 52%;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.35), transparent 65%);
+  animation: aurora-drift-c 38s ease-in-out infinite;
+}
+
+@keyframes aurora-drift-a {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(12vw, 8vh, 0) scale(1.15);
+  }
+}
+
+@keyframes aurora-drift-b {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1.1);
+  }
+  50% {
+    transform: translate3d(-14vw, -10vh, 0) scale(0.9);
+  }
+}
+
+@keyframes aurora-drift-c {
+  0%,
+  100% {
+    transform: translate3d(-50%, -50%, 0) scale(1);
+  }
+  33% {
+    transform: translate3d(-62%, -38%, 0) scale(1.2);
+  }
+  66% {
+    transform: translate3d(-38%, -62%, 0) scale(0.95);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .aurora-orb {
+    animation: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
