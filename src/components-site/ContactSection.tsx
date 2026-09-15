@@ -242,7 +242,6 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialService }
                     <option value="Artes para Divulgação">Artes para Divulgação</option>
                     <option value="Animação de Logo">Animação de Logo</option>
                     <option value="Website Institucional Completo">Website Institucional Completo</option>
-                    <option value="Projeto Sob Medida / Tailored">Projeto Sob Medida / Tailored</option>
                   </select>
                 </div>
 
