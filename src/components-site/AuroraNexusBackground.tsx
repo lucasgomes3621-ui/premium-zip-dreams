@@ -136,8 +136,8 @@ export function AuroraNexusBackground() {
       // Conexões
       for (let i = 0; i < nodes.length; i++) {
         for (let j = i + 1; j < nodes.length; j++) {
-          const a = nodes[i];
-          const b = nodes[j];
+          const a = nodes[i]!;
+          const b = nodes[j]!;
           const d = Math.hypot(a.x - b.x, a.y - b.y);
           if (d < 130) {
             ctx.beginPath();
@@ -155,14 +155,14 @@ export function AuroraNexusBackground() {
 
       // Pulsos de dados viajando pelas conexões
       for (let k = pulses.length - 1; k >= 0; k--) {
-        const p = pulses[k];
+        const p = pulses[k]!;
         p.t += p.speed;
         if (p.t >= 1) {
           pulses.splice(k, 1);
           continue;
         }
-        const a = nodes[p.from];
-        const b = nodes[p.to];
+        const a = nodes[p.from]!;
+        const b = nodes[p.to]!;
         const px = a.x + (b.x - a.x) * p.t;
         const py = a.y + (b.y - a.y) * p.t;
         ctx.beginPath();
