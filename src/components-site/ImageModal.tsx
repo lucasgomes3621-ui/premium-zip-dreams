@@ -6,7 +6,7 @@ interface ImageModalProps {
   onClose: () => void;
   imageSrc: string;
   title: string;
-  codeSnippet?: string;
+  codeSnippet?: string | undefined;
 }
 
 export const ImageModal: React.FC<ImageModalProps> = ({
