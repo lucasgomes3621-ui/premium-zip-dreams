@@ -101,14 +101,14 @@ export const InteractiveCursor: React.FC = () => {
 
       if (points.length > 2) {
         for (let i = 0; i < points.length; i++) {
-          const pt = points[i];
+          const pt = points[i]!;
           pt.age += 1;
           pt.x += pt.vx * 0.5;
           pt.y += pt.vy * 0.5;
         }
 
         // Filter expired points
-        while (points.length > 0 && points[0].age > 24) {
+        while (points.length > 0 && points[0]!.age > 24) {
           points.shift();
         }
 
@@ -117,8 +117,8 @@ export const InteractiveCursor: React.FC = () => {
         ctx.lineJoin = 'round';
 
         for (let i = 1; i < points.length; i++) {
-          const p1 = points[i - 1];
-          const p2 = points[i];
+          const p1 = points[i - 1]!;
+          const p2 = points[i]!;
           const progress = i / points.length;
           const alpha = progress * (1 - p2.age / 25);
 
