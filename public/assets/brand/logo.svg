@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" width="100%" height="100%">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="globeBlueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8" />
+      <stop offset="60%" stop-color="#0066FF" />
+      <stop offset="100%" stop-color="#003D99" />
+    </linearGradient>
+
+    <linearGradient id="arrowCyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E0F7FF" />
+      <stop offset="30%" stop-color="#38BDF8" />
+      <stop offset="100%" stop-color="#0066FF" />
+    </linearGradient>
+
+    <linearGradient id="studioTextGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8" />
+      <stop offset="100%" stop-color="#0077FF" />
+    </linearGradient>
+
+    <filter id="cyanGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.8" />
+    </filter>
+  </defs>
+
+  <rect width="640" height="400" fill="#080C14" rx="20" />
+
+  <!-- Corner Neon Arcs like the user's reference -->
+  <path d="M 0 100 C 60 70 120 40 180 0" stroke="#0066FF" stroke-width="3" fill="none" opacity="0.6" filter="url(#cyanGlow)" />
+  <path d="M 0 140 C 90 100 160 50 240 0" stroke="#38BDF8" stroke-width="1.5" fill="none" opacity="0.4" />
+  <path d="M 460 400 C 520 360 580 330 640 300" stroke="#0066FF" stroke-width="3" fill="none" opacity="0.6" filter="url(#cyanGlow)" />
+
+  <!-- Ambient Blue Core Glow -->
+  <circle cx="320" cy="140" r="110" fill="#0066FF" opacity="0.22" filter="url(#cyanGlow)" />
+  <circle cx="320" cy="140" r="60" fill="#38BDF8" opacity="0.25" filter="url(#cyanGlow)" />
+
+  <!-- Central Globe Sphere -->
+  <g transform="translate(320, 135)" filter="url(#softShadow)">
+    <!-- Globe Outer Ring -->
+    <circle cx="0" cy="0" r="64" fill="#070B13" stroke="url(#globeBlueGrad)" stroke-width="7" filter="url(#cyanGlow)" />
+    <circle cx="0" cy="0" r="64" fill="none" stroke="#E0F7FF" stroke-width="1.5" opacity="0.4" />
+
+    <!-- Latitude lines -->
+    <ellipse cx="0" cy="-22" rx="58" ry="16" fill="none" stroke="#38BDF8" stroke-width="4.5" opacity="0.9" />
+    <ellipse cx="0" cy="22" rx="58" ry="16" fill="none" stroke="#38BDF8" stroke-width="4.5" opacity="0.9" />
+
+    <!-- Equator line -->
+    <line x1="-63" y1="0" x2="63" y2="0" stroke="#38BDF8" stroke-width="5" opacity="0.95" />
+
+    <!-- Longitude central line -->
+    <line x1="0" y1="-63" x2="0" y2="63" stroke="#38BDF8" stroke-width="5" opacity="0.95" />
+
+    <!-- Longitude curves -->
+    <ellipse cx="0" cy="0" rx="32" ry="63" fill="none" stroke="#38BDF8" stroke-width="4.5" opacity="0.85" />
+
+    <!-- Cursor Pointer Arrow (pointing top-left, overlapping bottom right) -->
+    <g transform="translate(18, 14)" filter="url(#softShadow)">
+      <!-- Arrow Outer Glow / Stroke -->
+      <polygon points="0,0 48,34 26,38 38,62 26,67 14,43 -2,52" fill="url(#arrowCyanGrad)" stroke="#E0F7FF" stroke-width="2.5" filter="url(#cyanGlow)" />
+      <!-- Specular Highlight Line -->
+      <line x1="0" y1="0" x2="48" y2="34" stroke="#FFFFFF" stroke-width="2" opacity="0.8" />
+    </g>
+  </g>
+
+  <!-- Typography: GOMES STUDIO -->
+  <g transform="translate(320, 275)" text-anchor="middle" filter="url(#softShadow)">
+    <text font-family="'Plus Jakarta Sans', system-ui, -apple-system, sans-serif" font-weight="900" font-size="46" letter-spacing="0.04em">
+      <tspan fill="#FFFFFF">GOMES </tspan>
+      <tspan fill="url(#studioTextGrad)">STUDIO</tspan>
+    </text>
+
+    <!-- Horizontal Divider with Accent -->
+    <g transform="translate(0, 24)">
+      <line x1="-220" y1="0" x2="-140" y2="0" stroke="#1E293B" stroke-width="1.5" />
+      <line x1="-140" y1="0" x2="-100" y2="0" stroke="#0066FF" stroke-width="2" />
+      <line x1="100" y1="0" x2="140" y2="0" stroke="#0066FF" stroke-width="2" />
+      <line x1="140" y1="0" x2="220" y2="0" stroke="#1E293B" stroke-width="1.5" />
+      <circle cx="-100" cy="0" r="2.5" fill="#38BDF8" />
+      <circle cx="100" cy="0" r="2.5" fill="#38BDF8" />
+    </g>
+
+    <!-- Slogan Text -->
+    <text y="46" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="700" letter-spacing="0.22em">
+      <tspan fill="#94A3B8">DESIGN QUE </tspan>
+      <tspan fill="#38BDF8">CONECTA</tspan>
+      <tspan fill="#94A3B8">, SOLUÇÕES QUE </tspan>
+      <tspan fill="#0066FF">IMPULSIONAM</tspan>
+    </text>
+  </g>
+</svg>
