@@ -8,8 +8,8 @@ interface HeroProps {
 }
 
 export const Hero: React.FC<HeroProps> = ({ onImageClick }) => {
-  const officialLogoPath = 'assets/brand/gomes-studio-logo.png';
-  const logoVideoPath = 'assets/brand/gomes-studio-logo-hover.mp4';
+  const officialLogoPath = '/assets/brand/gomes-studio-logo.png';
+  const logoVideoPath = '/assets/brand/gomes-studio-logo-anim.mp4';
   const [logoHovered, setLogoHovered] = useState(false);
   const heroVideoRef = useRef<HTMLVideoElement>(null);
 

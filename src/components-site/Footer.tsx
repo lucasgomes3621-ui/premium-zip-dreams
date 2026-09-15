@@ -15,7 +15,7 @@ export const Footer: React.FC = () => {
             >
               <div className="relative flex items-center justify-center transition-transform duration-300 group-hover:scale-105 select-none py-0.5">
                 <img
-                  src="assets/brand/gomes-studio-logo.png"
+                  src="/assets/brand/gomes-studio-logo.png"
                   alt="Gomes Studio Logo"
                   className="h-9 w-auto max-w-[130px] object-contain drop-shadow-[0_2px_10px_rgba(0,102,255,0.25)] transition-all duration-300 group-hover:drop-shadow-[0_4px_16px_rgba(56,189,248,0.5)]"
                 />
