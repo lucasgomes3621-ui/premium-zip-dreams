@@ -120,7 +120,7 @@ export const Hero: React.FC<HeroProps> = ({ onImageClick }) => {
                 }`}
               >
                 <span className={`w-1.5 h-1.5 rounded-full transition-colors duration-300 ${logoHovered ? 'bg-[#38BDF8] animate-ping' : 'bg-[#64748B]'}`} />
-                <span>{logoHovered ? 'Identidade Animada' : 'Passe o cursor para animar'}</span>
+                <span>{logoHovered ? 'Identidade Animada' : 'Identidade em movimento'}</span>
               </div>
             </div>
           </div>
