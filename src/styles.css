@@ -59,6 +59,11 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+  --color-brand: var(--brand);
+  --color-brand-bright: var(--brand-bright);
+  --color-ink: var(--ink);
+  --color-copy: var(--copy);
+  --color-copy-muted: var(--copy-muted);
 }
 
 :root {
@@ -95,6 +100,11 @@
   --sidebar-accent-foreground: oklch(0.208 0.042 265.755);
   --sidebar-border: oklch(0.929 0.013 255.508);
   --sidebar-ring: oklch(0.704 0.04 256.788);
+  --brand: oklch(0.61 0.22 254);
+  --brand-bright: oklch(0.78 0.14 220);
+  --ink: oklch(0.12 0.02 255);
+  --copy: oklch(0.98 0.01 250);
+  --copy-muted: oklch(0.72 0.035 250);
 }
 
 .dark {
@@ -130,6 +140,11 @@
   --sidebar-accent-foreground: oklch(0.984 0.003 247.858);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.551 0.027 264.364);
+  --brand: oklch(0.61 0.22 254);
+  --brand-bright: oklch(0.78 0.14 220);
+  --ink: oklch(0.12 0.02 255);
+  --copy: oklch(0.98 0.01 250);
+  --copy-muted: oklch(0.72 0.035 250);
 }
 
 @layer base {
@@ -239,6 +254,150 @@ html {
 
 .bg-noise-overlay {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='0.6'/%3E%3C/svg%3E");
+}
+
+/* Primeira dobra — editorial tecnológica com vídeo integrado ao ambiente */
+.hero-premium {
+  isolation: isolate;
+  background: linear-gradient(180deg, color-mix(in oklab, var(--ink) 42%, transparent), transparent 30%);
+}
+
+.hero-tech-field {
+  opacity: 0.8;
+  background-image:
+    linear-gradient(90deg, transparent 49.92%, color-mix(in oklab, var(--brand-bright) 8%, transparent) 50%, transparent 50.08%),
+    linear-gradient(180deg, transparent 73%, color-mix(in oklab, var(--brand-bright) 7%, transparent) 73.1%, transparent 73.2%);
+  mask-image: linear-gradient(to bottom, transparent 4%, black 22%, black 78%, transparent 100%);
+}
+
+.hero-tech-line {
+  position: absolute;
+  top: 18%;
+  bottom: 18%;
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, color-mix(in oklab, var(--brand) 25%, transparent), transparent);
+}
+
+.hero-tech-line-left { left: max(5vw, calc((100vw - 80rem) / 2)); }
+.hero-tech-line-right { right: max(5vw, calc((100vw - 80rem) / 2)); }
+
+.hero-tech-cross {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border: 1px solid color-mix(in oklab, var(--brand-bright) 40%, transparent);
+}
+
+.hero-tech-cross-a { top: 30%; left: 8%; }
+.hero-tech-cross-b { top: 55%; right: 9%; }
+
+.hero-kicker {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  color: var(--brand-bright);
+  letter-spacing: 0.16em;
+}
+
+.hero-kicker > span {
+  width: 1.7rem;
+  height: 1px;
+  background: var(--brand-bright);
+  box-shadow: 0 0 12px color-mix(in oklab, var(--brand-bright) 65%, transparent);
+}
+
+.hero-title {
+  color: var(--copy);
+  letter-spacing: 0;
+  text-wrap: balance;
+  text-shadow: 0 8px 40px color-mix(in oklab, var(--ink) 85%, transparent);
+  animation: hero-reveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.hero-title span {
+  color: var(--brand-bright);
+}
+
+.hero-subtitle {
+  color: var(--copy-muted);
+  letter-spacing: 0;
+  text-wrap: balance;
+  animation: hero-reveal 0.8s 0.12s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.hero-cta {
+  border: 1px solid color-mix(in oklab, var(--brand-bright) 55%, transparent);
+  border-radius: 4px;
+  color: var(--copy);
+  background: color-mix(in oklab, var(--brand) 82%, var(--ink));
+  box-shadow: 0 12px 34px color-mix(in oklab, var(--brand) 24%, transparent);
+  letter-spacing: 0.08em;
+  transition: transform 300ms ease, background-color 300ms ease, border-color 300ms ease, box-shadow 300ms ease;
+  animation: hero-reveal 0.8s 0.22s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.hero-cta:hover {
+  transform: translateY(-2px);
+  background: var(--brand);
+  border-color: var(--brand-bright);
+  box-shadow: 0 16px 42px color-mix(in oklab, var(--brand) 34%, transparent);
+}
+
+.hero-video-shell {
+  height: clamp(12rem, 27vw, 22rem);
+  overflow: hidden;
+  background: var(--ink);
+  mask-image: radial-gradient(ellipse 72% 68% at 50% 58%, black 36%, rgba(0, 0, 0, 0.78) 55%, transparent 84%);
+  -webkit-mask-image: radial-gradient(ellipse 72% 68% at 50% 58%, black 36%, rgba(0, 0, 0, 0.78) 55%, transparent 84%);
+  animation: hero-brand-reveal 1.1s 0.3s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.hero-video-media {
+  object-position: center 58%;
+  filter: saturate(0.92) contrast(1.08) brightness(0.9);
+}
+
+.hero-video-blend {
+  background:
+    linear-gradient(to bottom, var(--ink), transparent 20%, transparent 68%, var(--ink) 100%),
+    linear-gradient(to right, var(--ink), transparent 18%, transparent 82%, var(--ink));
+  mix-blend-mode: multiply;
+}
+
+.hero-video-aura {
+  left: 50%;
+  bottom: 0;
+  width: min(72vw, 58rem);
+  height: 55%;
+  transform: translateX(-50%);
+  background: radial-gradient(ellipse, color-mix(in oklab, var(--brand) 18%, transparent), transparent 68%);
+  filter: blur(28px);
+}
+
+.hero-bottom-rule {
+  height: 1px;
+  background: linear-gradient(90deg, transparent 8%, color-mix(in oklab, var(--brand-bright) 25%, transparent), transparent 92%);
+}
+
+@keyframes hero-reveal {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes hero-brand-reveal {
+  from { opacity: 0; transform: translateY(24px) scale(0.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@media (max-width: 639px) {
+  .hero-tech-cross-a { top: 24%; left: 4%; }
+  .hero-tech-cross-b { top: 61%; right: 4%; }
+  .hero-video-shell {
+    height: clamp(11rem, 54vw, 14.5rem);
+    mask-image: radial-gradient(ellipse 92% 66% at 50% 58%, black 34%, rgba(0, 0, 0, 0.72) 58%, transparent 91%);
+    -webkit-mask-image: radial-gradient(ellipse 92% 66% at 50% 58%, black 34%, rgba(0, 0, 0, 0.72) 58%, transparent 91%);
+  }
+  .hero-video-media { object-position: center 60%; }
 }
 
 .aurora-orb {
