@@ -6,7 +6,8 @@ interface HeroProps {
 }
 
 const LOGO_IMAGE = "/assets/brand/gomes-studio-logo.png";
-const LOGO_VIDEO = "/assets/brand/gomes-studio-logo-anim.mp4";
+const LOGO_VIDEO_WEBM = "/assets/brand/gomes-studio-logo-anim.webm";
+const LOGO_VIDEO_MP4 = "/assets/brand/gomes-studio-logo-anim.mp4";
 
 export const Hero: React.FC<HeroProps> = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -73,7 +74,6 @@ export const Hero: React.FC<HeroProps> = () => {
             />
             <video
               ref={videoRef}
-              src={LOGO_VIDEO}
               poster={LOGO_IMAGE}
               muted
               playsInline
@@ -85,7 +85,10 @@ export const Hero: React.FC<HeroProps> = () => {
                 videoReady ? "opacity-100" : "opacity-0"
               }`}
               aria-label="Logo animada da Gomes Studio"
-            />
+            >
+              <source src={LOGO_VIDEO_WEBM} type="video/webm" />
+              <source src={LOGO_VIDEO_MP4} type="video/mp4" />
+            </video>
             <div className="hero-video-blend pointer-events-none absolute inset-0" aria-hidden="true" />
           </div>
         </div>
