@@ -169,6 +169,19 @@ body {
   overflow-x: hidden;
 }
 
+/* Mantém a experiência como uma superfície única, sem cortes entre seções. */
+#main-content > section {
+  border-top-width: 0;
+  border-bottom-width: 0;
+}
+
+/* Oculta globalmente o selo injetado na página publicada. */
+#lovable-badge {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
 html {
   scroll-behavior: smooth;
 }
