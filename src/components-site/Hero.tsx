@@ -19,14 +19,12 @@ export const Hero: React.FC<HeroProps> = () => {
       className="hero-premium relative flex min-h-[100svh] flex-col overflow-hidden pt-24 sm:pt-28"
     >
       <div className="hero-tech-field pointer-events-none absolute inset-0" aria-hidden="true">
-        <span className="hero-tech-line hero-tech-line-left" />
-        <span className="hero-tech-line hero-tech-line-right" />
         <span className="hero-tech-cross hero-tech-cross-a" />
         <span className="hero-tech-cross hero-tech-cross-b" />
       </div>
 
-      <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-1 flex-col items-center px-5 sm:px-8 lg:px-10">
-        <div className="flex w-full max-w-5xl flex-col items-center pt-7 text-center sm:pt-9 lg:pt-10">
+      <div className="relative z-10 flex w-full flex-1 flex-col items-center px-5 sm:px-10 lg:px-16 xl:px-24">
+        <div className="flex w-full flex-col items-center pt-8 text-center sm:pt-10 lg:pt-12">
           <p className="hero-kicker mb-5 font-mono text-[10px] font-semibold uppercase sm:mb-6 sm:text-xs">
             <span aria-hidden="true" />
             Presença digital para negócios
@@ -34,18 +32,18 @@ export const Hero: React.FC<HeroProps> = () => {
 
           <h1
             id="hero-title"
-            className="hero-title max-w-5xl text-[2.35rem] font-extrabold uppercase leading-[1.04] sm:text-6xl sm:leading-[1.02] lg:text-7xl"
+            className="hero-title w-full text-[2.3rem] font-extrabold uppercase leading-[1.02] sm:text-[3.7rem] lg:text-[4.6rem]"
           >
-            Sua empresa merece uma presença digital{" "}
-            <span>à altura.</span>
+            <span className="hero-title-line">Pronto para</span>
+            <span className="hero-title-line">ser visto</span>
+            <span className="hero-title-line hero-title-accent">de outro jeito?</span>
           </h1>
 
           <p
             id="hero-subtitle"
-            className="hero-subtitle mt-6 max-w-3xl text-base leading-relaxed sm:mt-7 sm:text-lg lg:text-xl"
+            className="hero-subtitle mt-6 max-w-2xl text-base leading-relaxed sm:mt-7 sm:text-lg lg:text-xl"
           >
-            Criamos landing pages e páginas profissionais para apresentar seu negócio,
-            conectar você aos seus clientes e gerar novas oportunidades.
+            Criamos experiências digitais que apresentam sua empresa com profissionalismo.
           </p>
 
           <a
@@ -61,7 +59,7 @@ export const Hero: React.FC<HeroProps> = () => {
           </a>
         </div>
 
-        <div className="hero-brand-stage relative mt-auto flex w-full max-w-5xl items-end justify-center pt-8 sm:pt-10">
+        <div className="hero-brand-stage relative mt-auto flex w-full max-w-6xl items-end justify-center pt-8 sm:pt-10">
           <div className="hero-video-aura pointer-events-none absolute" aria-hidden="true" />
           <div className="hero-video-shell relative w-full" aria-label="Animação da marca Gomes Studio">
             <img
@@ -93,8 +91,6 @@ export const Hero: React.FC<HeroProps> = () => {
           </div>
         </div>
       </div>
-
-      <div className="hero-bottom-rule pointer-events-none absolute inset-x-0 bottom-0" aria-hidden="true" />
     </section>
   );
 };
