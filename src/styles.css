@@ -263,23 +263,11 @@ html {
 }
 
 .hero-tech-field {
-  opacity: 0.8;
+  opacity: 0.88;
   background-image:
-    linear-gradient(90deg, transparent 49.92%, color-mix(in oklab, var(--brand-bright) 8%, transparent) 50%, transparent 50.08%),
     linear-gradient(180deg, transparent 73%, color-mix(in oklab, var(--brand-bright) 7%, transparent) 73.1%, transparent 73.2%);
   mask-image: linear-gradient(to bottom, transparent 4%, black 22%, black 78%, transparent 100%);
 }
-
-.hero-tech-line {
-  position: absolute;
-  top: 18%;
-  bottom: 18%;
-  width: 1px;
-  background: linear-gradient(to bottom, transparent, color-mix(in oklab, var(--brand) 25%, transparent), transparent);
-}
-
-.hero-tech-line-left { left: max(5vw, calc((100vw - 80rem) / 2)); }
-.hero-tech-line-right { right: max(5vw, calc((100vw - 80rem) / 2)); }
 
 .hero-tech-cross {
   position: absolute;
@@ -307,14 +295,20 @@ html {
 }
 
 .hero-title {
+  max-width: 13ch;
   color: var(--copy);
   letter-spacing: 0;
   text-wrap: balance;
-  text-shadow: 0 8px 40px color-mix(in oklab, var(--ink) 85%, transparent);
+  text-shadow: 0 8px 34px color-mix(in oklab, var(--ink) 76%, transparent);
   animation: hero-reveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
-.hero-title span {
+.hero-title-line {
+  display: block;
+  white-space: nowrap;
+}
+
+.hero-title .hero-title-accent {
   color: var(--brand-bright);
 }
 
@@ -374,11 +368,6 @@ html {
   filter: blur(28px);
 }
 
-.hero-bottom-rule {
-  height: 1px;
-  background: linear-gradient(90deg, transparent 8%, color-mix(in oklab, var(--brand-bright) 25%, transparent), transparent 92%);
-}
-
 @keyframes hero-reveal {
   from { opacity: 0; transform: translateY(18px); }
   to { opacity: 1; transform: translateY(0); }
@@ -392,6 +381,9 @@ html {
 @media (max-width: 639px) {
   .hero-tech-cross-a { top: 24%; left: 4%; }
   .hero-tech-cross-b { top: 61%; right: 4%; }
+  .hero-title {
+    max-width: 11ch;
+  }
   .hero-video-shell {
     height: clamp(11rem, 54vw, 14.5rem);
     mask-image: radial-gradient(ellipse 92% 66% at 50% 58%, black 34%, rgba(0, 0, 0, 0.72) 58%, transparent 91%);
