@@ -66,10 +66,10 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onSelectServic
                       id={`service-cta-${service.number}`}
                       href="#contato"
                       onClick={() => onSelectService(service.serviceKey)}
-                      className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg text-xs font-mono font-semibold tracking-wider text-white bg-[#141822] hover:bg-[#0066FF] border border-white/10 hover:border-transparent transition-all duration-200 group/btn shadow-sm"
+                       className="action-glass action-glass-secondary inline-flex items-center justify-center gap-2 px-5 py-3 text-xs font-mono font-semibold tracking-wider group/btn"
                     >
                       <span>{service.ctaText}</span>
-                      <ArrowUpRight className="w-4 h-4 text-[#38BDF8] group-hover/btn:text-white transition-transform group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" />
+                       <ArrowUpRight className="action-glass-icon w-4 h-4 transition-transform duration-500 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" />
                     </a>
                   </div>
                 </div>

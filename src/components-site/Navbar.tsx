@@ -106,11 +106,11 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
             href="https://lucasgomes3621-ui.github.io/Gomes-Studio-/"
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-semibold text-white bg-gradient-to-r from-[#0066FF] to-[#0052cc] hover:from-[#38BDF8] hover:to-[#0066FF] transition-all group shadow-md shadow-[#0066FF]/20 hover:shadow-[0_0_25px_rgba(56,189,248,0.4)]"
+            className="action-glass action-glass-compact group hidden sm:inline-flex items-center gap-2 px-5 py-2.5 text-xs font-semibold"
           >
             <span className="w-2 h-2 rounded-full bg-[#10B981] animate-ping" />
             <span className="tracking-wide">INICIAR PROJETO</span>
-            <ArrowRight className="w-3.5 h-3.5 text-white transition-transform group-hover:translate-x-1" />
+            <ArrowRight className="action-glass-icon w-3.5 h-3.5 transition-transform duration-500 group-hover:translate-x-1" />
           </a>
 
           {/* Mobile Hamburger Menu Toggle Button */}
@@ -185,11 +185,11 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={handleLinkClick}
-                  className="flex items-center justify-center gap-2.5 w-full py-3.5 px-4 rounded-lg bg-[#0066FF] hover:bg-[#0052cc] text-white font-medium text-sm transition-colors shadow-lg shadow-[#0066FF]/25"
+                  className="action-glass action-glass-primary group flex items-center justify-center gap-2.5 w-full py-3.5 px-4 text-sm font-medium"
                 >
                   <span className="w-2 h-2 rounded-full bg-[#10B981] animate-ping" />
                   <span>Falar no WhatsApp</span>
-                  <ArrowRight className="w-4 h-4" />
+                  <ArrowRight className="action-glass-icon w-4 h-4 transition-transform duration-500 group-hover:translate-x-1" />
                 </a>
               </div>
             </div>
