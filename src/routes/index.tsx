@@ -95,6 +95,7 @@ function Index() {
 
       <main id="main-content" className="relative z-10 flex flex-1 flex-col">
         <Hero onImageClick={handleOpenImage} />
+        <BrandFilm onImageClick={handleOpenImage} />
         <ManifestoSection />
         <ProjectsSection
           onImageClick={handleOpenImage}
