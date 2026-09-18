@@ -1,5 +1,7 @@
+// ============= Full file contents =============
+
 import React from "react";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ChevronDown } from "lucide-react";
 
 interface HeroProps {
   onImageClick: (imageSrc: string, title: string, codeSnippet?: string) => void;
@@ -19,7 +21,7 @@ export const Hero: React.FC<HeroProps> = () => {
         <span className="hero-tech-cross hero-tech-cross-b" />
       </div>
 
-      <div className="relative z-10 flex w-full flex-1 flex-col items-center px-5 sm:px-10 lg:px-16 xl:px-24">
+      <div className="relative z-10 flex w-full flex-1 flex-col items-center justify-center px-5 sm:px-10 lg:px-16 xl:px-24">
         <div className="flex w-full flex-col items-center pt-8 text-center sm:pt-10 lg:pt-12">
           <p className="hero-kicker mb-5 font-mono text-[10px] font-semibold uppercase sm:mb-6 sm:text-xs">
             <span aria-hidden="true" />
@@ -53,8 +55,35 @@ export const Hero: React.FC<HeroProps> = () => {
             />
           </a>
         </div>
+      </div>
 
-        <figure className="hero-brand-stage relative mt-auto flex w-full max-w-5xl flex-col items-center justify-end pt-10 sm:pt-12">
+      <a
+        href="#video-apresentacao"
+        className="hero-scroll-cue group relative z-10 mx-auto flex flex-col items-center gap-2 pb-8 font-mono text-[10px] font-medium uppercase tracking-[0.22em] sm:pb-10 sm:text-[11px]"
+        aria-label="Rolar para o vídeo de apresentação"
+      >
+        <span>Explorar</span>
+        <ChevronDown
+          className="h-4 w-4 transition-transform duration-500 group-hover:translate-y-1"
+          aria-hidden="true"
+        />
+      </a>
+    </section>
+  );
+};
+
+export const BrandFilm: React.FC<HeroProps> = () => {
+  return (
+    <section
+      id="video-apresentacao"
+      className="hero-premium hero-film relative flex min-h-[100svh] flex-col items-center justify-center overflow-hidden px-5 py-24 sm:px-10 lg:px-16 xl:px-24"
+    >
+      <div className="hero-tech-field pointer-events-none absolute inset-0" aria-hidden="true">
+        <span className="hero-tech-cross hero-tech-cross-b" />
+      </div>
+
+      <div className="relative z-10 flex w-full max-w-5xl flex-col items-center">
+        <figure className="hero-brand-stage relative flex w-full flex-col items-center">
           <div className="hero-video-aura pointer-events-none absolute" aria-hidden="true" />
           <div className="hero-video-shell relative w-full" aria-label="Vídeo de apresentação da Gomes Studio">
             <video
