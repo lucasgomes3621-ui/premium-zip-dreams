@@ -308,7 +308,7 @@ html {
 }
 
 .hero-title {
-  max-width: 13ch;
+  max-width: 20ch;
   color: var(--copy);
   letter-spacing: 0;
   text-wrap: balance;
@@ -422,24 +422,21 @@ html {
 }
 
 .hero-video-shell {
-  height: clamp(12rem, 27vw, 22rem);
+  aspect-ratio: 16 / 9;
   overflow: hidden;
-  background: var(--ink);
-  mask-image: radial-gradient(ellipse 72% 68% at 50% 58%, black 36%, rgba(0, 0, 0, 0.78) 55%, transparent 84%);
-  -webkit-mask-image: radial-gradient(ellipse 72% 68% at 50% 58%, black 36%, rgba(0, 0, 0, 0.78) 55%, transparent 84%);
+  border: 1px solid color-mix(in oklab, var(--brand-bright) 24%, transparent);
+  border-radius: 8px;
+  background: color-mix(in oklab, var(--ink) 92%, transparent);
+  box-shadow:
+    inset 0 1px 0 color-mix(in oklab, var(--copy) 7%, transparent),
+    0 20px 60px color-mix(in oklab, var(--ink) 58%, transparent),
+    0 0 36px color-mix(in oklab, var(--brand) 9%, transparent);
   animation: hero-brand-reveal 1.1s 0.3s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
 .hero-video-media {
-  object-position: center 58%;
-  filter: saturate(0.92) contrast(1.08) brightness(0.9);
-}
-
-.hero-video-blend {
-  background:
-    linear-gradient(to bottom, var(--ink), transparent 20%, transparent 68%, var(--ink) 100%),
-    linear-gradient(to right, var(--ink), transparent 18%, transparent 82%, var(--ink));
-  mix-blend-mode: multiply;
+  background: var(--ink);
+  filter: saturate(0.94) contrast(1.04);
 }
 
 .hero-video-aura {
@@ -450,6 +447,11 @@ html {
   transform: translateX(-50%);
   background: radial-gradient(ellipse, color-mix(in oklab, var(--brand) 18%, transparent), transparent 68%);
   filter: blur(28px);
+}
+
+.hero-video-caption {
+  color: color-mix(in oklab, var(--copy-muted) 76%, transparent);
+  letter-spacing: 0.04em;
 }
 
 @keyframes hero-reveal {
@@ -466,14 +468,11 @@ html {
   .hero-tech-cross-a { top: 24%; left: 4%; }
   .hero-tech-cross-b { top: 61%; right: 4%; }
   .hero-title {
-    max-width: 11ch;
+    max-width: 20ch;
   }
   .hero-video-shell {
-    height: clamp(11rem, 54vw, 14.5rem);
-    mask-image: radial-gradient(ellipse 92% 66% at 50% 58%, black 34%, rgba(0, 0, 0, 0.72) 58%, transparent 91%);
-    -webkit-mask-image: radial-gradient(ellipse 92% 66% at 50% 58%, black 34%, rgba(0, 0, 0, 0.72) 58%, transparent 91%);
+    border-radius: 6px;
   }
-  .hero-video-media { object-position: center 60%; }
 }
 
 .aurora-orb {
