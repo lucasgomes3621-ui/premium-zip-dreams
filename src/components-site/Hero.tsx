@@ -1,18 +1,14 @@
-import React, { useRef, useState } from "react";
-import { ArrowDown } from "lucide-react";
+import React from "react";
+import { ArrowRight } from "lucide-react";
 
 interface HeroProps {
   onImageClick: (imageSrc: string, title: string, codeSnippet?: string) => void;
 }
 
 const LOGO_IMAGE = "/assets/brand/gomes-studio-logo.png";
-const LOGO_VIDEO_WEBM = "/assets/brand/gomes-studio-logo-anim.webm";
 const LOGO_VIDEO_MP4 = "/assets/brand/gomes-studio-logo-anim.mp4";
 
 export const Hero: React.FC<HeroProps> = () => {
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const [videoReady, setVideoReady] = useState(false);
-
   return (
     <section
       id="inicio"
@@ -32,18 +28,17 @@ export const Hero: React.FC<HeroProps> = () => {
 
           <h1
             id="hero-title"
-            className="hero-title w-full text-[2.3rem] font-extrabold uppercase leading-[1.02] sm:text-[3.7rem] lg:text-[4.6rem]"
+            className="hero-title w-full text-[1.72rem] font-extrabold uppercase leading-[1.04] sm:text-[3.35rem] lg:text-[4.35rem]"
           >
-            <span className="hero-title-line">Pronto para</span>
-            <span className="hero-title-line">ser visto</span>
-            <span className="hero-title-line hero-title-accent">de outro jeito?</span>
+            <span className="hero-title-line">Quem se apresenta melhor,</span>
+            <span className="hero-title-line hero-title-accent">sai na frente.</span>
           </h1>
 
           <p
             id="hero-subtitle"
             className="hero-subtitle mt-6 max-w-2xl text-base leading-relaxed sm:mt-7 sm:text-lg lg:text-xl"
           >
-            Criamos experiências digitais que apresentam sua empresa com profissionalismo.
+            Landing Pages <span aria-hidden="true">·</span> Páginas Profissionais <span aria-hidden="true">·</span> Social Media
           </p>
 
           <a
@@ -51,45 +46,33 @@ export const Hero: React.FC<HeroProps> = () => {
             href="#servicos"
             className="hero-cta action-glass action-glass-primary group mt-8 inline-flex min-h-14 w-full items-center justify-center gap-3 px-7 text-xs font-bold uppercase sm:mt-9 sm:w-auto sm:px-9 sm:text-sm"
           >
-            <span>Conheça nossas soluções</span>
-            <ArrowDown
-              className="action-glass-icon h-4 w-4 shrink-0 transition-transform duration-500 group-hover:translate-y-1"
+            <span>Quero me destacar</span>
+            <ArrowRight
+              className="action-glass-icon h-4 w-4 shrink-0 transition-transform duration-500 group-hover:translate-x-1"
               aria-hidden="true"
             />
           </a>
         </div>
 
-        <div className="hero-brand-stage relative mt-auto flex w-full max-w-6xl items-end justify-center pt-8 sm:pt-10">
+        <figure className="hero-brand-stage relative mt-auto flex w-full max-w-5xl flex-col items-center justify-end pt-10 sm:pt-12">
           <div className="hero-video-aura pointer-events-none absolute" aria-hidden="true" />
-          <div className="hero-video-shell relative w-full" aria-label="Animação da marca Gomes Studio">
-            <img
-              src={LOGO_IMAGE}
-              alt="Gomes Studio"
-              fetchPriority="high"
-              className={`hero-video-media absolute inset-0 h-full w-full object-cover transition-opacity duration-700 ${
-                videoReady ? "opacity-0" : "opacity-100"
-              }`}
-            />
+          <div className="hero-video-shell relative w-full" aria-label="Vídeo de apresentação da Gomes Studio">
             <video
-              ref={videoRef}
               poster={LOGO_IMAGE}
-              muted
               playsInline
-              autoPlay
-              loop
               preload="metadata"
-              onCanPlay={() => setVideoReady(true)}
-              className={`hero-video-media h-full w-full object-cover transition-opacity duration-700 ${
-                videoReady ? "opacity-100" : "opacity-0"
-              }`}
-              aria-label="Logo animada da Gomes Studio"
+              controls
+              className="hero-video-media block h-full w-full object-contain"
+              aria-label="Vídeo comercial de apresentação da logo Gomes Studio"
             >
-              <source src={LOGO_VIDEO_WEBM} type="video/webm" />
               <source src={LOGO_VIDEO_MP4} type="video/mp4" />
+              Seu navegador não suporta a reprodução deste vídeo.
             </video>
-            <div className="hero-video-blend pointer-events-none absolute inset-0" aria-hidden="true" />
           </div>
-        </div>
+          <figcaption className="hero-video-caption mt-3 text-center font-mono text-[10px] sm:text-xs">
+            Vídeo comercial exemplo — apresentação de logo.
+          </figcaption>
+        </figure>
       </div>
     </section>
   );
