@@ -49,11 +49,11 @@ export const Hero: React.FC<HeroProps> = () => {
           <a
             id="hero-cta-solucoes"
             href="#servicos"
-            className="hero-cta group mt-8 inline-flex min-h-14 w-full items-center justify-center gap-3 px-7 text-xs font-bold uppercase sm:mt-9 sm:w-auto sm:px-9 sm:text-sm"
+            className="hero-cta action-glass action-glass-primary group mt-8 inline-flex min-h-14 w-full items-center justify-center gap-3 px-7 text-xs font-bold uppercase sm:mt-9 sm:w-auto sm:px-9 sm:text-sm"
           >
             <span>Conheça nossas soluções</span>
             <ArrowDown
-              className="h-4 w-4 shrink-0 transition-transform duration-300 group-hover:translate-y-1"
+              className="action-glass-icon h-4 w-4 shrink-0 transition-transform duration-500 group-hover:translate-y-1"
               aria-hidden="true"
             />
           </a>

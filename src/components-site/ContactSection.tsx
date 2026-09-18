@@ -267,10 +267,10 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialService }
                 <button
                   id="contact-submit-btn"
                   type="submit"
-                  className="w-full py-4 px-6 rounded-xl bg-[#0066FF] hover:bg-[#0052cc] text-white font-semibold text-sm flex items-center justify-center gap-2.5 transition-all shadow-lg shadow-[#0066FF]/30 active:scale-[0.99] cursor-pointer"
+                  className="action-glass action-glass-primary group w-full py-4 px-6 font-semibold text-sm flex items-center justify-center gap-2.5 active:scale-[0.99] cursor-pointer"
                 >
                   <span>ENVIAR MENSAGEM VIA WHATSAPP</span>
-                  <ArrowRight className="w-4 h-4" />
+                  <ArrowRight className="action-glass-icon w-4 h-4 transition-transform duration-500 group-hover:translate-x-1" />
                 </button>
               </form>
             </div>
