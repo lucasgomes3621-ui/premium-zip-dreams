@@ -470,6 +470,12 @@ html {
   .hero-title {
     max-width: 20ch;
   }
+  .hero-title-line {
+    white-space: normal;
+  }
+  .hero-title-accent {
+    white-space: nowrap;
+  }
   .hero-video-shell {
     border-radius: 6px;
   }
