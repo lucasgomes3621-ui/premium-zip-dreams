@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 
 import { Navbar } from "../components-site/Navbar";
-import { Hero } from "../components-site/Hero";
+import { Hero, BrandFilm } from "../components-site/Hero";
 import { ManifestoSection } from "../components-site/ManifestoSection";
 import { ProjectsSection } from "../components-site/ProjectsSection";
 import { ServicesSection } from "../components-site/ServicesSection";
