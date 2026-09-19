@@ -8,6 +8,7 @@ interface ContactSectionProps {
 }
 
 export const ContactSection: React.FC<ContactSectionProps> = ({ initialService }) => {
+  const briefingUrl = 'https://lucasgomes3621-ui.github.io/Gomes-Studio-/';
   const [name, setName] = useState('');
   const [company, setCompany] = useState('');
   const [phone, setPhone] = useState('');
@@ -63,9 +64,20 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialService }
               {CONTACT_DATA.headline}
             </h2>
 
-            <p className="text-base sm:text-lg text-[#94A3B8] mb-10 leading-relaxed">
+            <p className="text-base sm:text-lg text-[#94A3B8] mb-6 leading-relaxed">
               {CONTACT_DATA.subtext}
             </p>
+
+            <a
+              id="contact-briefing-cta"
+              href={briefingUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="action-glass action-glass-primary group mb-10 inline-flex min-h-14 w-full items-center justify-center gap-3 px-7 text-xs font-bold uppercase sm:w-auto sm:px-9 sm:text-sm"
+            >
+              <span>Iniciar meu projeto</span>
+              <ArrowRight className="action-glass-icon h-4 w-4 shrink-0 transition-transform duration-500 group-hover:translate-x-1" />
+            </a>
 
             {/* Direct Contact Cards with <a> tags */}
             <div className="flex flex-col gap-4">

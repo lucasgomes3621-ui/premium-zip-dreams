@@ -165,7 +165,7 @@ export const ABOUT_DATA = {
   locationDetails: 'Sediado em Nanuque - MG, Brasil. Atendimento para empresas e marcas visionárias.',
   p1: 'Na GOMES STUDIO, não criamos apenas páginas — criamos experiências digitais pensadas para apresentar sua empresa com mais profissionalismo, clareza e personalidade.',
   p2: 'Cada detalhe é desenvolvido com propósito: design moderno, identidade visual, experiência do usuário e soluções digitais alinhadas à essência de cada empresa.',
-  quote: '“Porque para nós, ter um site não é apenas estar na internet. É ocupar o espaço que a sua marca merece.”'
+  quote: '“Porque para nós, ter uma página não é apenas estar na internet. É ocupar o espaço que a sua marca merece.”'
 };
 
 export const FOUNDER_DATA = {
