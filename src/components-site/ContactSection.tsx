@@ -8,6 +8,7 @@ interface ContactSectionProps {
 }
 
 export const ContactSection: React.FC<ContactSectionProps> = ({ initialService }) => {
+  const briefingUrl = 'https://lucasgomes3621-ui.github.io/Gomes-Studio-/';
   const [name, setName] = useState('');
   const [company, setCompany] = useState('');
   const [phone, setPhone] = useState('');
@@ -27,7 +28,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialService }
     e.preventDefault();
 
     const formattedMessage = encodeURIComponent(
-      `*Solicitação de Orçamento - Gomes Studio*\n\n` +
+      `*Contato de Projeto - Gomes Studio*\n\n` +
       `*Nome:* ${name}\n` +
       `*Empresa / Marca:* ${company || 'Não informada'}\n` +
       `*WhatsApp:* ${phone}\n` +
@@ -63,9 +64,20 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialService }
               {CONTACT_DATA.headline}
             </h2>
 
-            <p className="text-base sm:text-lg text-[#94A3B8] mb-10 leading-relaxed">
+            <p className="text-base sm:text-lg text-[#94A3B8] mb-6 leading-relaxed">
               {CONTACT_DATA.subtext}
             </p>
+
+            <a
+              id="contact-briefing-cta"
+              href={briefingUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="action-glass action-glass-primary group mb-10 inline-flex min-h-14 w-full items-center justify-center gap-3 px-7 text-xs font-bold uppercase sm:w-auto sm:px-9 sm:text-sm"
+            >
+              <span>Iniciar meu projeto</span>
+              <ArrowRight className="action-glass-icon h-4 w-4 shrink-0 transition-transform duration-500 group-hover:translate-x-1" />
+            </a>
 
             {/* Direct Contact Cards with <a> tags */}
             <div className="flex flex-col gap-4">
@@ -131,10 +143,10 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialService }
             <div className="p-8 sm:p-10 rounded-2xl bg-[#12151C] border border-white/[0.08] shadow-2xl relative">
               <div className="mb-8">
                 <h3 className="text-xl sm:text-2xl font-bold text-white mb-2">
-                  Solicitar Orçamento / Iniciar Conversa
+                  Contato rápido pelo WhatsApp
                 </h3>
                 <p className="text-sm text-[#94A3B8]">
-                  Preencha os campos abaixo e entraremos em contato imediatamente.
+                  Se preferir falar diretamente conosco, envie as informações abaixo.
                 </p>
               </div>
 
@@ -238,10 +250,11 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialService }
                     onChange={(e) => setService(e.target.value)}
                     className="w-full px-4 py-3 rounded-lg bg-[#0F1218] border border-white/10 text-white text-sm focus:outline-none focus:border-[#0066FF] focus:ring-1 focus:ring-[#0066FF] transition-all cursor-pointer"
                   >
+                    <option value="Landing Page Essencial">Landing Page Essencial</option>
                     <option value="Landing Page Profissional">Landing Page Profissional</option>
+                    <option value="Página Profissional Completa">Página Profissional Completa</option>
                     <option value="Artes para Divulgação">Artes para Divulgação</option>
                     <option value="Animação de Logo">Animação de Logo</option>
-                    <option value="Website Institucional Completo">Website Institucional Completo</option>
                   </select>
                 </div>
 

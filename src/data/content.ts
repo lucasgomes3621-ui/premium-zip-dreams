@@ -52,7 +52,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
     id: 'gomes-studio-platform',
     number: '#02',
     title: 'GOMES STUDIO',
-    category: 'WEBSITE INSTITUCIONAL',
+    category: 'PÁGINA PROFISSIONAL',
     description: 'Experiência digital e arquitetura de marca do próprio estúdio, unindo visual escuro moderno, microinterações e alta performance.',
     imageSrc: '/assets/projects/gomes-studio.svg',
     relativeImagePath: '/assets/projects/gomes-studio.svg',
@@ -83,27 +83,27 @@ export const PROJECTS_DATA: ProjectItem[] = [
 export const SERVICES_DATA: ServiceItem[] = [
   {
     number: '01',
-    title: 'LANDING PAGE PROFISSIONAL',
-    badge: 'DESIGN • CONVERSÃO • WHATSAPP',
-    description: 'Uma página criada para apresentar, valorizar e conectar sua empresa aos clientes. Desenvolvemos páginas modernas e personalizadas com informações estratégicas, identidade visual e caminhos diretos para contato pelo WhatsApp.',
-    ctaText: 'QUERO UMA LANDING PAGE',
-    serviceKey: 'Landing Page Profissional'
+    title: 'LANDING PAGE ESSENCIAL',
+    badge: 'NÍVEL 01 • ESSENCIAL',
+    description: 'Uma página objetiva para apresentar sua empresa, serviço ou produto e facilitar o contato com seus clientes.',
+    ctaText: 'ESCOLHER ESTA OPÇÃO',
+    serviceKey: 'Landing Page Essencial'
   },
   {
     number: '02',
-    title: 'ARTES PARA DIVULGAÇÃO',
-    badge: 'SOCIAL MEDIA & CRIATIVOS',
-    description: 'Criativos profissionais para divulgar produtos, serviços, promoções e campanhas, mantendo a identidade visual e o profissionalismo absoluto da sua marca nas redes.',
-    ctaText: 'QUERO DIVULGAR MINHA MARCA',
-    serviceKey: 'Artes para Divulgação'
+    title: 'LANDING PAGE PROFISSIONAL',
+    badge: 'NÍVEL 02 • PROFISSIONAL',
+    description: 'Uma página mais completa, com apresentação estratégica, seções personalizadas, informações da empresa e direcionamento para conversão.',
+    ctaText: 'ESCOLHER ESTA OPÇÃO',
+    serviceKey: 'Landing Page Profissional'
   },
   {
     number: '03',
-    title: 'ANIMAÇÃO DE LOGO',
-    badge: 'MOTION & IDENTIDADE SONORA/VISUAL',
-    description: 'Vídeos curtos e modernos que dão movimento e mais impacto à identidade da sua marca, perfeitos para reels, introduções institucionais e anúncios.',
-    ctaText: 'QUERO ANIMAR MINHA MARCA',
-    serviceKey: 'Animação de Logo'
+    title: 'PÁGINA PROFISSIONAL COMPLETA',
+    badge: 'NÍVEL 03 • COMPLETA',
+    description: 'Uma experiência digital mais completa para empresas que precisam apresentar seus serviços, diferenciais, informações e presença profissional de forma mais estruturada.',
+    ctaText: 'ESCOLHER ESTA OPÇÃO',
+    serviceKey: 'Página Profissional Completa'
   }
 ];
 
@@ -163,9 +163,9 @@ export const ABOUT_DATA = {
   headline: 'Design que conecta, soluções que impulsionam.',
   badgeLocation: 'GOMES STUDIO',
   locationDetails: 'Sediado em Nanuque - MG, Brasil. Atendimento para empresas e marcas visionárias.',
-  p1: 'Somos um estúdio criativo especializado em transformar ideias em experiências digitais que conectam marcas e pessoas. Na GOMES STUDIO, não criamos apenas sites — construímos presença, autoridade e oportunidades para negócios que desejam evoluir.',
+  p1: 'Na GOMES STUDIO, não criamos apenas páginas — criamos experiências digitais pensadas para apresentar sua empresa com mais profissionalismo, clareza e personalidade.',
   p2: 'Cada detalhe é desenvolvido com propósito: design moderno, identidade visual, experiência do usuário e soluções digitais alinhadas à essência de cada empresa.',
-  quote: '“Porque para nós, ter um site não é apenas estar na internet. É ocupar o espaço que a sua marca merece.”'
+  quote: '“Porque para nós, ter uma página não é apenas estar na internet. É ocupar o espaço que a sua marca merece.”'
 };
 
 export const FOUNDER_DATA = {
@@ -183,8 +183,8 @@ export const FOUNDER_DATA = {
 
 export const CONTACT_DATA = {
   sectionNumber: '06 // VAMOS CONVERSAR',
-  headline: 'Pronto para levar sua empresa para o próximo nível?',
-  subtext: 'Vamos transformar sua ideia em uma presença digital que realmente representa a relevância do seu negócio.',
+  headline: 'Vamos tirar seu projeto do papel?',
+  subtext: 'Conte um pouco sobre sua empresa e o que você precisa. A partir dessas informações, podemos entender seu projeto e indicar a solução mais adequada.',
   whatsapp: '(33) 99103-1052',
   whatsappRaw: '5533991031052',
   email: 'gomes.studio.ai@gmail.com',
