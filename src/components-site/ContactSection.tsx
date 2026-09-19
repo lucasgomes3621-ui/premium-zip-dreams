@@ -253,8 +253,6 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialService }
                     <option value="Landing Page Essencial">Landing Page Essencial</option>
                     <option value="Landing Page Profissional">Landing Page Profissional</option>
                     <option value="Página Profissional Completa">Página Profissional Completa</option>
-                    <option value="Artes para Divulgação">Artes para Divulgação</option>
-                    <option value="Animação de Logo">Animação de Logo</option>
                   </select>
                 </div>
 
