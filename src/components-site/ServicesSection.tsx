@@ -8,6 +8,8 @@ interface ServicesSectionProps {
 }
 
 export const ServicesSection: React.FC<ServicesSectionProps> = ({ onSelectService }) => {
+  const briefingUrl = 'https://lucasgomes3621-ui.github.io/Gomes-Studio-/';
+
   return (
     <section
       id="servicos"
@@ -18,13 +20,13 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onSelectServic
         <ScrollReveal>
           <div className="mb-16">
             <span className="font-mono text-xs sm:text-sm font-semibold tracking-widest text-[#38BDF8] uppercase mb-3 block">
-              03 // CAPACIDADES &amp; SERVIÇOS
+              03 // TIPOS DE PÁGINA
             </span>
             <h2
               id="servicos-title"
               className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white max-w-2xl"
             >
-              O que fazemos para potencializar seu negócio.
+              Escolha o nível ideal para o seu projeto.
             </h2>
           </div>
         </ScrollReveal>
@@ -64,7 +66,9 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onSelectServic
                   <div className="lg:col-span-3 flex lg:justify-end">
                     <a
                       id={`service-cta-${service.number}`}
-                      href="#contato"
+                       href={briefingUrl}
+                       target="_blank"
+                       rel="noopener noreferrer"
                       onClick={() => onSelectService(service.serviceKey)}
                        className="action-glass action-glass-secondary inline-flex items-center justify-center gap-2 px-5 py-3 text-xs font-mono font-semibold tracking-wider group/btn"
                     >

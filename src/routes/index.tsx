@@ -20,7 +20,7 @@ import type { ProjectItem } from "../types";
 
 const TITLE = "Gomes Studio | Design Digital & Soluções Web Premium";
 const DESCRIPTION =
-  "Estúdio de design digital que cria landing pages, sites institucionais e experiências web de alta conversão com identidade forte e atendimento direto no WhatsApp.";
+  "Estúdio especializado em landing pages, páginas profissionais e experiências digitais que apresentam empresas, produtos e serviços com clareza e personalidade.";
 
 export const Route = createFileRoute("/")({
   head: () => ({

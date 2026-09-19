@@ -13,13 +13,13 @@ export const FeaturesSection: React.FC = () => {
         <ScrollReveal>
           <div className="mb-16">
             <span className="font-mono text-xs sm:text-sm font-semibold tracking-widest text-[#38BDF8] uppercase mb-3 block">
-              POR QUE ESCOLHER A GOMES STUDIO?
+              POR QUE GOMES STUDIO?
             </span>
             <h2
               id="diferenciais-title"
               className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white"
             >
-              O padrão que define o nosso trabalho.
+              Detalhes que fazem diferença.
             </h2>
           </div>
         </ScrollReveal>

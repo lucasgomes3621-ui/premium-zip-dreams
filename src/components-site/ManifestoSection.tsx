@@ -50,10 +50,10 @@ export const ManifestoSection: React.FC = () => {
           {/* Right Column: Editorial Body Copy */}
           <ScrollReveal delay={0.2} className="lg:col-span-6 flex flex-col gap-6 text-[#94A3B8] text-base sm:text-lg leading-relaxed pt-2">
             <p className="leading-relaxed">
-              A <strong className="text-white font-semibold tracking-wide">GOMES STUDIO</strong> nasceu com um propósito claro: transformar negócios em marcas digitalmente relevantes.
+              A <strong className="text-white font-semibold tracking-wide">GOMES STUDIO</strong> nasceu para criar páginas e experiências digitais que apresentam empresas, produtos e serviços com profissionalismo.
             </p>
             <p className="leading-relaxed">
-              Em um mercado onde a primeira impressão acontece cada vez mais no ambiente online, acreditamos que uma presença digital estratégica pode ser o ponto de virada para empresas que desejam crescer, se destacar e conquistar novos clientes.
+              Unimos clareza, personalidade e estratégia para construir uma presença digital capaz de valorizar cada negócio e facilitar novas oportunidades.
             </p>
           </ScrollReveal>
         </div>
