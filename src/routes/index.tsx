@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 
 import { Navbar } from "../components-site/Navbar";
-import { Hero, BrandFilm } from "../components-site/Hero";
+import { Hero } from "../components-site/Hero";
 import { ManifestoSection } from "../components-site/ManifestoSection";
 import { ProjectsSection } from "../components-site/ProjectsSection";
 import { ServicesSection } from "../components-site/ServicesSection";
@@ -95,7 +95,6 @@ function Index() {
 
       <main id="main-content" className="relative z-10 flex flex-1 flex-col">
         <Hero onImageClick={handleOpenImage} />
-        <BrandFilm onImageClick={handleOpenImage} />
         <ManifestoSection />
         <ProjectsSection
           onImageClick={handleOpenImage}
